@@ -1,4 +1,7 @@
-# <stdio.h>
+#include <stdio.h>
+/* initiation of assignment 1 for geng1003 Patrick Shaw c3153679 */
 
-/* assessment 2 setup*/
-int main (void)0{return 0;}
+int main(void)
+{
+    printf("hello world")
+}
