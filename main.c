@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <math.h>
 void encrypt (char*x, int key);
+void unencrypt (char*x, int key);
 int main()
 {
    // declare char message for encoding//
@@ -28,20 +29,30 @@ int main()
 printf("un-encrypted message: %s\n", message);       //test case change//
 encrypt (message, key);
 printf("encrypted message: %s\n", message);
+unencrypt(message, key);
+printf("unncrypted message: %s\n", message);
 
 }
 
 void encrypt(char*x,int key)
 {int i = 0;
-while (x[i]!='\0')
+while (x[i] != '\0')
 { 
-x[i] = (x[i]-65 + key)%26 +65;
-i = i++;
+x[i] = ((x[i]-65 + key)%26) +65;
+i++;
+
+}}
+
+
+void unencrypt(char*x,int key)
+{int i = 0;
+while (x[i] != '\0')
+{ 
+x[i] = ((x[i]-65 - key)%26) +65;
+i++;
+
 }
 }
-
-
-
 
 
 
